@@ -26,3 +26,36 @@ curl -sSO https://raw.githubusercontent.com/windgx/btpanel/main/one_key_happy.sh
 wget -N --no-check-certificate https://raw.githubusercontent.com/windgx/btpanel/main/LocaleCN.sh && bash LocaleCN.sh
 ```
 开心版安装完成后使用 bt 命令可能出现报错，只需要将终端设置为中文语言即可。（可以查阅LocaleCN.sh文件中对应系统的修改命令，先备份好原始文件，然后使用该命令修改语言并重启，尝试 bt 命令正常后，再恢复原有语言文件。这样做的目的是因为在后期使用时个别程序会因为语言不一致，而导致程序无法正常运行。）
+
+**宝塔面板7.7一键优化补丁**
+
+1.去除宝塔面板强制绑定账号
+
+2.去除各种删除操作时的计算题与延时等待
+
+3.去除创建网站自动创建的垃圾文件（index.html、404.html、.htaccess）
+
+4.关闭未绑定域名提示页面，防止有人访问未绑定域名直接看出来是用的宝塔面板
+
+5.关闭活动推荐与在线客服，去除首页企业版广告
+
+6.去除自动校验文件与上报信息定时任务
+
+7.去除面板日志与网站绑定域名上报
+
+* 原链接
+```bash
+wget -O optimize.sh http://f.cccyun.cc/bt/optimize.sh && bash optimize.sh
+```
+* 如果原链接无法访问
+```bash
+wget -O optimize.sh https://raw.githubusercontent.com/s700k/btpanel_mod/main/optimize_mod.sh && bash optimize.sh
+```
+* 如果Ngnix创建的网站出现403 forbidden(保留网站创建的文件)
+```bash
+wget -O optimize.sh https://raw.githubusercontent.com/s700k/btpanel_mod/main/optimize_mod2.sh && bash optimize.sh
+```
+
+
+
+
