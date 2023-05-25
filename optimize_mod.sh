@@ -25,11 +25,6 @@ fi;
 wget -q https://raw.githubusercontent.com/s700k/btpanel_mod/main/bt.js -O $JS_file;
 echo "已去除各种计算题与延时等待."
 
-sed -i "/htaccess = self.sitePath+'\/.htaccess'/, /public.ExecShell('chown -R www:www ' + htaccess)/d" /www/server/panel/class/panelSite.py
-sed -i "/index = self.sitePath+'\/index.html'/, /public.ExecShell('chown -R www:www ' + index)/d" /www/server/panel/class/panelSite.py
-sed -i "/doc404 = self.sitePath+'\/404.html'/, /public.ExecShell('chown -R www:www ' + doc404)/d" /www/server/panel/class/panelSite.py
-echo "已去除创建网站自动创建的垃圾文件."
-
 sed -i "s/root \/www\/server\/nginx\/html/return 400/" /www/server/panel/class/panelSite.py
 if [ -f /www/server/panel/vhost/nginx/0.default.conf ]; then
 	sed -i "s/root \/www\/server\/nginx\/html/return 400/" /www/server/panel/vhost/nginx/0.default.conf
