@@ -1,3 +1,20 @@
+默认安装就是企业版，可用所有插件。
+
+带更新功能。
+
+
+
+如果觉得有后门，请勿使用。
+非本人项目，本人不承担任何风险责任。
+该项目作者不开源破解思路，但我已经使用了2年有余，并未出现被挂马情况。
+
+全新安装：
+curl -sSO http://io.bt.sy/install/install_panel.sh && bash install_panel.sh
+官方版升级到开心版：
+curl http://io.bt.sy/install/update6.sh|bash
+
+
+
 # btpanel
 btpanel7.7开心版
 （1）安装时如果报错，请先部署环境后再重新安装（此处以Debian系统为例，其他系统参照）
